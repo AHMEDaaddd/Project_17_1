@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "skypro_hw_17_1_project"
+version = "0.1.0"
+description = ""
+authors = ["SkyPro Student"]
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+flake8 = "^7.3.0"
+mypy = "^1.16.1"
+pydocstyle = "^6.3.0"
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
