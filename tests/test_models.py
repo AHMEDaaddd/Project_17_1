@@ -21,6 +21,18 @@ def test_middle_price_empty_category() -> None:
     assert category.middle_price() == 0
 
 
+def test_middle_price_empty():
+    c = Category("Test", "Desc", [])
+    assert c.middle_price() == 0
+
+
+def test_middle_price_correct():
+    p1 = Product("A", "D", 100, 1)
+    p2 = Product("B", "D", 200, 1)
+    c = Category("Test", "Desc", [p1, p2])
+    assert c.middle_price() == 150
+
+
 def test_add_product_success(capsys) -> None:
     category = Category("Категория", "Описание", [])
     product = Product("Продукт", "Описание", 100, 5)

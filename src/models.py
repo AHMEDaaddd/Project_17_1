@@ -60,10 +60,7 @@ class Category:
 
     def middle_price(self) -> float:
         """Возвращает среднюю цену товаров в категории (или 0 при отсутствии товаров)."""
-        try:
-            if not self.products:
-                raise ZeroDivisionError
-            total = sum(product.price for product in self.products)
-            return total / len(self.products)
-        except ZeroDivisionError:
+        if not self.products:
             return 0
+        total = sum(product.price for product in self.products)
+        return total / len(self.products)
